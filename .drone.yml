@@ -8,22 +8,22 @@ steps:
   image: dtzar/helm-kubectl:2.16.1
   commands:
   - curl -s https://get.yaml.sh | sh
-  - export name=`ysh -f ./ombi/Chart.yaml -Q "name"`
-  - export version=`ysh -f ./ombi/Chart.yaml -Q "version"`
+  - export NAME=`ysh -f ./ombi/Chart.yaml -Q "name"`
+  - export VERSION=`ysh -f ./ombi/Chart.yaml -Q "version"`
   - pwd
   - ls -lh
   - export
   - helm init -c
-  - helm lint ${name}
+  - helm lint ${NAME}
   - wget -O - https://github.com/norwoodj/helm-docs/releases/download/v0.9.0/helm-docs_0.9.0_Linux_x86_64.tar.gz | tar xvzf - helm-docs
   - ./helm-docs
-  - helm package ${name}
+  - helm package ${NAME}
   - git config --global user.email "drone@holthome.net"
   - git config --global user.name "Drone.IO"
   - git config --global push.default simple
-  - git tag -a -m 'v${version}' v{$version}
+  - git tag -a -m 'v${VERSION}' v{$VERSION}
   - git remote add tags ${DRONE_REPO_LINK}
-  - git push tags v{$version}
+  - git push tags v{$VERSION}
   - git remote remove tags
 
 - name: clone_gh-pages
