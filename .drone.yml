@@ -49,3 +49,9 @@ steps:
     author_name: "[Automated] Drone.IO"
     author_email: "drone@holthome.net"
     path: helm-charts
+
+trigger:
+  branch:
+  - master
+  event:
+  - push
