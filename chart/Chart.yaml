@@ -3,7 +3,7 @@ appVersion: "4.0.4994-ls59"
 icon: https://raw.githubusercontent.com/tidusjar/Ombi/master/src/Ombi/wwwroot/images/favicon/favicon.ico
 description: Ombi is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves! Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience for your users. 
 name: ombi
-version: 1.3
+version: 0.1.3
 source: https://github.com/tidusjar/Ombi
 home: https://github.com/carpenike/chart-ombi
 keywords:
