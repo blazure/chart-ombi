@@ -23,6 +23,13 @@ steps:
   - git push tags v$VERSION
   - git remote remove tags
 
+- name: publish
+  image: plugins/github-release
+  settings:
+    files: "*.tgz"
+  when:
+    event: tag
+
 - name: clone_gh-pages
   image: plugins/git
   commands:
