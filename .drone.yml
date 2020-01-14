@@ -8,8 +8,8 @@ steps:
   image: dtzar/helm-kubectl:2.16.1
   commands:
   - curl -s https://get.yaml.sh | sh
-  - name=`ysh -f ./ombi/Chart.yaml -Q "name"`
-  - version=`ysh -f ./ombi/Chart.yaml -Q "version"`
+  - set name=`ysh -f ./ombi/Chart.yaml -Q "name"`
+  - set version=`ysh -f ./ombi/Chart.yaml -Q "version"`
   - pwd
   - ls -lh
   - export
