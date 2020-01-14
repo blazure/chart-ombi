@@ -7,7 +7,7 @@ steps:
 - name: build-and-lint
   image: dtzar/helm-kubectl:2.16.1
   commands:
-  - YSH_LIB=1;source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/azohra/yaml.sh/v0.2.0/ysh)"
+  - curl -s https://get.yaml.sh | sh
   - name=`ysh -f ombi/Chart.yaml -Q "ombi"`
   - version=`ysh -f ombi/Chart.yaml -Q "version"`
   - export
