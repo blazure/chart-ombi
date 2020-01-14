@@ -28,7 +28,7 @@ steps:
 - name: push_gh-pages
   image: appleboy/drone-git-push
   settings:
-    remote: git@github.com:carpenike/helm-charts.git
+    remote: https://github.com/carpenike/helm-charts.git
     branch: gh-pages
     local_branch: gh-pages
     commit: true
@@ -36,5 +36,5 @@ steps:
     author_name: "[Automated] Drone.IO"
     author_email: "drone@holthome.net"
     path: helm-charts
-    ssh_key:
-      from_secret: SSH_KEY
+    # ssh_key:
+    #   from_secret: SSH_KEY
