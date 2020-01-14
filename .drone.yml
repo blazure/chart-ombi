@@ -54,4 +54,5 @@ trigger:
   branch:
   - master
   event:
-  - push
+    include:
+    - push
